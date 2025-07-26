@@ -6,12 +6,11 @@ A secure, modular backend system simulating a vehicle damage inspection workflow
 
 ## 🧰 Tech Stack
 - Flask (REST API)
-- MySQL (Database)
+- MySQL (Database) -> Deployed on Railways
 - SQLAlchemy ORM
 - JWT Auth
 - bcrypt (passwords)
-- Marshmallow (optional)
-
+- Marshmallow 
 ---
 
 ## 📦 Features
@@ -20,6 +19,8 @@ A secure, modular backend system simulating a vehicle damage inspection workflow
 - Status filtering (`pending`, `reviewed`, `completed`)
 - Image URL validation (`.jpg`, `.jpeg`, `.png`)
 - Logging and centralized error handling
+- Rate Limitting
+- Strong Password Validation
 
 ---
 
@@ -102,3 +103,4 @@ Returns JWT token.
 ### GET /inspection?status=pending
 
 ---
+## Deployed On Render
