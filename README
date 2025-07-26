@@ -11,6 +11,8 @@ A secure, modular backend system simulating a vehicle damage inspection workflow
 - JWT Auth
 - bcrypt (passwords)
 - Marshmallow 
+- Postman (Testing)
+- Render for Deployment
 ---
 
 ## 📦 Features
