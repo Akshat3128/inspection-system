@@ -1,0 +1,104 @@
+# 🚗 Damage Inspection System API (Flask + MySQL)
+
+A secure, modular backend system simulating a vehicle damage inspection workflow. Built for Inspektlabs Junior Backend Engineer assignment.
+
+---
+
+## 🧰 Tech Stack
+- Flask (REST API)
+- MySQL (Database)
+- SQLAlchemy ORM
+- JWT Auth
+- bcrypt (passwords)
+- Marshmallow (optional)
+
+---
+
+## 📦 Features
+- JWT-secured Authentication (`/signup`, `/login`)
+- Authenticated CRUD for Inspections
+- Status filtering (`pending`, `reviewed`, `completed`)
+- Image URL validation (`.jpg`, `.jpeg`, `.png`)
+- Logging and centralized error handling
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the repo
+```bash
+git clone https://github.com/yourusername/inspection-system.git
+cd inspection-system
+```
+
+### 2. Create virtual environment & install deps
+```bash
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+### 3. Setup `.env`
+```bash
+cp .env.example .env
+```
+Edit `.env` with your MySQL credentials.
+
+### 4. Initialize DB
+```bash
+flask shell
+>>> from app import db
+>>> db.create_all()
+>>> exit()
+```
+
+### 5. Run Server
+```bash
+python run.py
+```
+
+---
+
+## 🔐 Auth Routes
+### POST /signup
+```json
+{
+  "username": "john",
+  "password": "pass123"
+}
+```
+
+### POST /login
+```json
+{
+  "username": "john",
+  "password": "pass123"
+}
+```
+Returns JWT token.
+
+---
+
+## 🛠️ Inspection Routes
+> Require `Authorization: Bearer <JWT>` header.
+
+### POST /inspection
+```json
+{
+  "vehicle_number": "DL01AB1234",
+  "damage_report": "Broken light",
+  "image_url": "http://img.jpg"
+}
+```
+
+### GET /inspection/<id>
+### PATCH /inspection/<id>
+```json
+{
+  "status": "reviewed"
+}
+```
+
+### GET /inspection?status=pending
+
+---

@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.egg-info/
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv/
+
+# Environment Variables
+.env
+.env.*
+
+# Database
+*.sqlite3
+*.db
+
+# Logs
+*.log
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+
+# Byte-compiled / cache
+.mypy_cache/
+.pytest_cache/
+.coverage
+
+# PyInstaller
+dist/
+build/
+
+# Unit test / coverage reports
+htmlcov/
+.cache/
+
+# Flask / Gunicorn
+instance/
+*.pid
