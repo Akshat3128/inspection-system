@@ -18,7 +18,7 @@ limiter = Limiter(key_func=get_remote_address, default_limits=["100 per minute"]
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
-
+    
     db.init_app(app)
     jwt.init_app(app)
     ma.init_app(app)
